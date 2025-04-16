@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "tf-state-dev"
-    key    = "terraform.tfstate"
+    bucket = "onwardscredit"
+    key    = "dev/terraform.tfstate"
     region = "us-east-1"
   }
 }
