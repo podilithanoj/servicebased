@@ -4,7 +4,7 @@ name                          = "dev-eks-vpc"
 
 k8s_vpc_enabled               = true
 k8s_vpc_cidr                  = "10.0.0.0/16"
-vpc_azs                       = ["us-east-1a", "us-east-1b", "us-east-1c"]
+vpc_azs                       = ["us-east-1b", "us-east-1b", "us-east-1c"]
 
 k8s_private_subnets_cidrs     = [
   "10.0.0.0/18",
