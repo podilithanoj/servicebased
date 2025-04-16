@@ -1,31 +1,21 @@
-# VPC
-vpc_cidr = "10.10.0.0/16"
-enable_dns_hostnames = true
-enable_dns_support   = true
+region                        = "us-east-1"
+environment                   = "dev"
+name                          = "dev-eks-vpc"
 
-# Subnets
-public_subnet_cidrs = ["10.10.1.0/24", "10.10.2.0/24"]
-private_subnet_cidrs = ["10.10.3.0/24", "10.10.4.0/24"]
+k8s_vpc_enabled               = true
+k8s_vpc_cidr                  = "10.0.0.0/16"
+vpc_azs                       = ["us-east-1a", "us-east-1b", "us-east-1c"]
 
-# NAT and IGW
-enable_nat_gateway = true
-single_nat_gateway = true
-enable_internet_gateway = true
+k8s_private_subnets_cidrs     = [
+  "10.0.0.0/18",
+  "10.0.64.0/19",
+  "10.0.96.0/19"
+]
 
-# AZ Mapping (optional)
-availability_zones = ["us-east-1a", "us-east-1b"]
+k8s_public_subnets_cidrs      = [
+  "10.0.128.0/18",
+  "10.0.192.0/19",
+  "10.0.224.0/19"
+]
 
-# Tags
-environment = "dev"
-project     = "java-app-service-1"
-owner       = "dev-team"
-cost_center = "dev-1234"
-
-# NACL Rules (optional)
-enable_nacl = true
-
-# Route table options
-enable_custom_route_table = true
-
-# VPC Name (optional)
-vpc_name = "java-app-service-1-dev-vpc"
+enable_ipv6                   = false
