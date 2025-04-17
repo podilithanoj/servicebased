@@ -1,7 +1,0 @@
-env           = "dev"
-ami_id        = "ami-00a929b66ed6e0de6"
-instance_type = "t2.micro"
-subnet_id     = "subnet-0123456789abcdef0"
-bucket_name   = "dev-terraform-bucket"
-domain_name   = "dev.example.com"
-vpc_id        = "vpc-0abcdef1234567890"
