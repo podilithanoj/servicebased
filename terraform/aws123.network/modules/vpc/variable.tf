@@ -32,3 +32,7 @@ variable "enable_nat_gateway" {
   description = "Whether to enable NAT Gateway"
   type        = bool
 }
+variable "region" {
+  description = "AWS region to deploy the resources"
+  type        = string
+}
