@@ -16,7 +16,7 @@ module "vpc" {
   one_nat_gateway_per_az = false
   manage_default_security_group = false
   manage_default_network_acl    = false
-  create_network_acl            = false
+ 
 
   tags = {
     Environment = var.environment
