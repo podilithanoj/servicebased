@@ -14,6 +14,9 @@ module "vpc" {
   enable_nat_gateway   = var.enable_nat_gateway
   single_nat_gateway   = true
   one_nat_gateway_per_az = false
+  manage_default_security_group = false
+  manage_default_network_acl    = false
+  create_network_acl            = false
 
   tags = {
     Environment = var.environment
